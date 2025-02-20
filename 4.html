@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>testing 4</title>
+    <link rel="shortcut icon" href="emoji.png" type="image/x-icon">
+
+    <script type="text/javascript">
+
+            function process()
+            {
+                let num = parseFloat(document.getElementById("number").value);
+                let roundedNum = Math.round(num);
+                document.getElementById("result").value = roundedNum;
+            }
+
+    </script>
+
+    <style>
+        body{
+        margin: 0;
+        font-family: Klavika;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+        .box{
+            height: 400px;
+            width: 900px;
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 2px solid rgb(0, 255, 0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #00ff00;
+            font-size: 25px;
+        }
+        hr{
+            border: none;
+            height: 3px;
+            margin: 20px 0px;
+            background-color: #00ff00;
+        }
+        input{
+            height: 35px;
+            width: 400px;
+            border-radius: 10px;
+            background-color: #00ff00;
+            color: #000000;
+            font-size: 25px;
+            text-align: center;
+        }
+        button{
+            height: 35px;
+            width: 180px;
+            background-color: #00ff00;
+            border-radius: 10px;
+            color: #000000;
+            font-size: 25px;
+            cursor: pointer;
+        }
+/* To remove the up-down arrow from the input box*/
+        input[type="number"] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Webkit browsers (Chrome, Safari) */
+            margin: 0;
+        }
+
+    </style>
+
+</head>
+<body background="venom.jpg">
+
+<div class="box">
+    <p>Number :</p>
+    <input type="number" id="number" value="" placeholder="Enter your number">
+
+<hr>
+
+    <button onclick="process()">Process</button>
+
+<hr>
+
+    <p>Rounded numbers :</p>
+    <input type="number" id="result" value="">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>testing 5</title>
+    <link rel="shortcut icon" href="emoji.png" type="image/x-icon">
+    <style>
+
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            height: 300px;
+            width: 900px;
+            backdrop-filter: blur(20px);
+            border: 3px solid rgb(0, 255, 0);
+            border-radius: 20px;
+            color: #00ff00;
+            text-align: center;
+            font-family: Klavika;
+            font-size: 25px;
+        }
+        button{
+            height: 35px;
+            width: 180px;
+            background-color: #ff6000;
+            border-radius: 10px;
+            color: #000000;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #00ff00;
+            transition: 0.5s;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        function process()
+        {
+            let min = 21;
+            let max = 55;
+            let num = Math.round(Math.random() * (max - min)) + min;
+        alert("You will marry at the age of "+num+"...!");
+        }
+
+    </script>
+</head>
+<body background="venom.jpg">
+
+    <div class="box">
+        <h3>Click the button to find out the age at which you'll get married..!</h3>
+        <button id="age" onclick="process()">Click here</button>
+    </div>
+    
+</body>
+</html>
