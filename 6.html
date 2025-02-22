@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>testing 6</title>
+    <link rel="shortcut icon" href="emoji.png" type="image/x-icon">
+
+    <style></style>
+    <script type="text/javascript">
+
+        function clearDisplay()
+        {
+            document.getElementById('display').value = '';
+        }
+
+        function appearToDisplay(value)
+        {
+            document.getElementById('display').value += value;
+        }
+        function calculate()
+        {
+            try {
+                document.getElementById('display').value = eval(document.getElementById('display').value);
+            } catch (e) {
+                alert('Invalid Expression');
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <h3>You need to calculate something...?</h3>
+    
+    <div class="calculator">
+
+        <input type="text" id="display" disabled>
+
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appearToDisplay('7')">7</button>
+                <button onclick="appearToDisplay('8')">8</button>
+                <button onclick="appearToDisplay('9')">9</button>
+                <br>
+                <button onclick="appearToDisplay('/')">/</button>
+                <button onclick="appearToDisplay('4')">4</button>
+                <button onclick="appearToDisplay('5')">5</button>
+                <button onclick="appearToDisplay('6')">6</button>
+                <br>
+                <button onclick="appearToDisplay('*')">*</button>
+                <button onclick="appearToDisplay('1')">1</button>
+                <button onclick="appearToDisplay('2')">2</button>
+                <button onclick="appearToDisplay('3')">3</button>
+                <br>
+                <button onclick="appearToDisplay('+')">+</button>
+                <button onclick="appearToDisplay('.')">.</button>
+                <button onclick="appearToDisplay('0')">0</button>
+                <button onclick="calculate()">=</button>
+                <br>
+                <button onclick="appearToDisplay('-')">-</button>
+            </div>
+    </div>
+
+</body>
+</html>
