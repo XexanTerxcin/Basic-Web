@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Testing 9</title>
+    <link rel="shortcut icon" href="emoji.png" type="image/x-icon">
+    <script type="text/javascript">
+
+        function process() {
+
+            let x = document.getElementById("NUM").value;
+            if(x ===""){
+
+                alert("Please write a number");
+
+            }
+            else if(x<1||x>21){
+
+                document.getElementById("txt").innerHTML = "Invalid Number";
+                document.getElementById("NUM").value = "";
+
+            }
+            else if(isNaN(x)){
+
+                alert("<p style='color: red;'>Please write a valid number</p>");
+
+            }
+            else{
+
+                document.getElementById("txt").innerHTML = "<p style='color: rgba(0, 255, 0, 1);'>The number you've submitted ("+x+") is a Valid Number </p>";
+                
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>javascript Validation</h1>
+    <p style="color: #ff6000;">Please input a number between 1 to 21</p>
+    <input type="text" id="NUM">
+    <button id="button" onclick="process()">SUBMIT</button>
+    <p id="txt" style="color: rgba(255, 0, 0, 0.8);"></p>
+</body>
+</html>

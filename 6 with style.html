@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>testing 6</title>
+    <link rel="shortcut icon" href="emoji.png" type="image/x-icon">
+
+    <style>
+
+        body{
+            margin: 0px;
+            font-family: Klavika;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Klavika;
+            background-image: url("venom.jpg");
+        }
+        .calculator{
+            height: 520px;
+            width: 350px;
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 3px solid rgb(0, 255, 0);
+            color: #00ff00;
+        }
+        .display{
+            height: 35px;
+            width: 300px;
+            font-size: 25px;
+            font-family: Klavika;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 3px solid rgb(0, 255, 0);
+            border-radius: 8px;
+            color: #00ff00;
+        }
+        hr{
+            border: 0;
+            margin: 20px 0px;
+            height: 3px;
+            background-color: #00ff00;
+        }
+        button{
+            padding: 8px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 25px;
+            font-family: Klavika;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 3px solid rgb(0, 255, 0);
+            color:#00ff00;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 3px solid rgb(255, 96, 0);
+            color:#ff6000;
+            transition: 0.5s;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        function clearDisplay()
+        {
+            document.getElementById('display').value = '';
+        }
+
+        function appearToDisplay(value)
+        {
+            document.getElementById('display').value += value;
+        }
+        function calculate()
+        {
+            try {
+                document.getElementById('display').value = eval(document.getElementById('display').value);
+            } catch (e) {
+                alert('Math er 12 ta bazay disen dekhteci...Ki equation disen eTa???');
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="calculator">
+        <h3>You need to calculate something...?</h3>
+
+        <input type="text" class="display" id="display" disabled>
+        <hr>
+
+            <div class="buttons">
+                <button onclick="appearToDisplay('/')">/</button>
+                <button onclick="appearToDisplay('7')">7</button>
+                <button onclick="appearToDisplay('8')">8</button>
+                <button onclick="appearToDisplay('9')">9</button>
+                <br>
+                <button onclick="appearToDisplay('*')">*</button>
+                <button onclick="appearToDisplay('4')">4</button>
+                <button onclick="appearToDisplay('5')">5</button>
+                <button onclick="appearToDisplay('6')">6</button>
+                <br>
+                <button onclick="appearToDisplay('+')">+</button>
+                <button onclick="appearToDisplay('1')">1</button>
+                <button onclick="appearToDisplay('2')">2</button>
+                <button onclick="appearToDisplay('3')">3</button>
+                <br>
+                <button onclick="appearToDisplay('-')">-</button>
+                <button onclick="appearToDisplay('.')">.</button>
+                <button onclick="appearToDisplay('0')">0</button>
+                <button onclick="clearDisplay()">C</button>
+                <br>
+                <button onclick="calculate()">=</button>
+            </div>
+    </div>
+
+</body>
+</html>
